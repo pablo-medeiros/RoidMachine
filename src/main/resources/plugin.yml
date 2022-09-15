@@ -1,0 +1,5 @@
+name: RoidMachine
+version: '${project.version}'
+main: bd.pablo.roidmc.machine.RoidMachine
+depend: [ RoidCore ]
+description: Machine to roid mc
