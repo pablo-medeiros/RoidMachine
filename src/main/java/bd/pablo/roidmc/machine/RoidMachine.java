@@ -1,17 +1,39 @@
 package bd.pablo.roidmc.machine;
 
+import com.roidmc.core.RoidCore;
+import com.roidmc.core.RoidPlugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class RoidMachine extends JavaPlugin {
+import java.io.File;
 
-    @Override
-    public void onEnable() {
-        // Plugin startup logic
+public final class RoidMachine extends JavaPlugin implements RoidPlugin {
 
+    {
+        RoidCore.registerPlugin(this);
     }
 
     @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    public void onInit() {
+        System.out.println("Init Machine");
+    }
+
+    @Override
+    public void onStart() {
+        System.out.println("Start Machine");
+    }
+
+    @Override
+    public void onShutdown() {
+        System.out.println("Stop Machine");
+    }
+
+    @Override
+    public JavaPlugin getPlugin() {
+        return this;
+    }
+
+    @Override
+    public File getFile() {
+        return super.getFile();
     }
 }
