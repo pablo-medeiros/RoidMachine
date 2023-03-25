@@ -1,0 +1,6 @@
+machine.placed
+- &aMaquina colocada
+machine.break
+- &cMaquina removida
+machine.add_friend
+- &eDigite o nome do amigo ou digite &7&lCANCELAR&e.
